@@ -15,5 +15,19 @@ loadEventListeners();
  }
 
 // add task
-function addTask(){
+function addTask(e){
+ if(taskInput.value === ""){
+   alert("Add a Task");
+    }
+ // create li element
+ const li = document.createElement('li');
+ // Add class
+ li.className = 'collection-item';
+ // Create text node and append to li
+ li.appendChild(document.createTextNode(taskInput.value));
+ // create new link element
+ const link = document.createElement('a');
+ // Add Class name 
+ link.className = "delete-item secondary-content";
+ e.preventDefault();
 }
